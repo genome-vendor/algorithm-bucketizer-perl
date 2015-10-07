@@ -1,0 +1,31 @@
+Source: libalgorithm-bucketizer-perl
+Section: perl
+Priority: optional
+Build-Depends: debhelper (>= 7)
+Build-Depends-Indep: perl, libsysadm-install-perl (>= 0.23)
+Maintainer: Thomas Mooney <tmooney@genome.wustl.edu>
+Standards-Version: 3.8.3
+Homepage: http://search.cpan.org/dist/Algorithm-Bucketizer/
+
+Package: libalgorithm-bucketizer-perl
+Architecture: all
+Depends: ${perl:Depends}, ${misc:Depends}, libsysadm-install-perl (>= 0.23)
+Description: Distribute sized items to buckets with limited size
+ So, you own a number of mp3-Songs on your hard disc and want to copy them to
+ a number of CDs, maxing out the space available on each of them? You want to
+ distribute your picture collection into several folders, so each of them
+ doesn't exceed a certain size? Algorithm::Bucketizer comes to the rescue.
+ .
+ Algorithm::Bucketizer distributes items of a defined size into a number of
+ dynamically created buckets, each of them capable of holding items of a
+ defined total size.
+ .
+ By calling the $bucketizer->add_item() method with the item (can be a scalar
+ or an object reference) and its size as parameters, you're adding items to
+ the system. The bucketizer will determine if the item fits into one of the
+ existing buckets and put it in there if possible. If none of the existing
+ buckets has enough space left to hold the new item (or if no buckets exist
+ yet for that matter), the bucketizer will create a new bucket and put the
+ item in there.
+ .
+ This description was automagically extracted from the module by dh-make-perl.
